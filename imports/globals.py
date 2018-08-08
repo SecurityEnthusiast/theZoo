@@ -18,6 +18,9 @@
 import sys
 import os
 import random
+import ssl
+
+ssl._create_default_https_context = ssl._create_stdlib_context #to solve macos ssl verify
 
 class init:
 
