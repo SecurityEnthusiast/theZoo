@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
     # Malware DB - the most awesome free malware database on the air
-    # Copyright (C) 2014, Yuval Nativ, Lahad Ludar, 5Fingers
+    # Copyright (C) 2014-2025, Yuval Nativ, Lahad Ludar, 5Fingers
 
     # This program is free software: you can redistribute it and/or modify
     # it under the terms of the GNU General Public License as published by
@@ -28,10 +28,10 @@ from imports.globals import vars
 from imports.terminal_handler import Controller
 from imports import db_handler
 
-__version__ = "0.6.0 Moat"
+__version__ = "0.7.1 Moat"
 __codename__ = "Moat"
 __appname__ = "theZoo"
-__authors__ = ["Yuval Nativ", "Shahak Shalev", "Lahad Ludar", "5Fingers"]
+__authors__ = ["Yuval Nativ", "Shahak Shalev", "Lahad Ludar", "5Fingers", "Harsh Raj Singhania"]
 __licensev__ = "GPL v3.0"
 __maintainer = "Yuval Nativ & Shahak Shalev"
 __status__ = "Beta"

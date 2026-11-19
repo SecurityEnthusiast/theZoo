@@ -4,7 +4,19 @@ import rlcompleter
 try:
 	import readline
 except ImportError:
-	from imports import winreadline as readline
+	try:
+		from imports import winreadline as readline
+	except ImportError:
+		print("Required module not installed: readline\nAttempting to install with pip...")
+		try:
+			import pip
+		except ImportError:
+			sys.exit(1)
+		if hasattr(pip, 'main'):
+			pip.main(['install', 'readline'])
+		else:
+			pip._internal.main(['install', 'readline'])
+		import readline
 
 from imports import globals
 from imports import manysearches
@@ -152,6 +164,8 @@ class Controller:
 				try:
 					update_handler.get_malware(self.currentmodule)
 				except:
+					import traceback
+					traceback.print_exc()
 					print(red('[-] ') + 'Error getting malware.')
 				return
 			# If used the 'use' command
